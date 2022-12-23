@@ -1,12 +1,12 @@
 a{text-decoration:none;color:white}
 a:hover{text-decoration:underline}
 .all_block{background-color:#343434;height: 100%;padding: 0;margin: 0}
-.title_block{background-color:black;padding:15px}
-.Blogs_title{color:#ffffff;margin-left:13.5rem;font-size:25px}
-.Home_title{color:#ffffff;margin-left:515px}
+.title_block{background-color:rgb(0, 0, 0);padding:15px;}
+.Blogs_title{color:#ffffff;margin-left:9%;font-size:25px}
+.other_title{margin-right:9%;float: right;margin-top: 9px;}
 .title{color:#ffffff;margin-left:12px}
-.Home_title_login{color:#ffffff;margin-left:448px}
-.white_block{background-color:#ffffff;margin-left:16%;margin-right:16%;height:30rem}
+
+.white_block{background-color:#ffffff;margin-left:10%;margin-right:10%;height:80rem}
 
 
 .white_sentence{display:flex;justify-content:center;align-items:center;font-size:28px;padding:30px}
@@ -18,9 +18,10 @@ a:hover{text-decoration:underline}
 .white_singup{display:flex;justify-content:center;justify-content:center;font-size:30px;padding:40px}
 .white_input{display:flex;justify-content:center;justify-content:center;margin-top:8px} 
 .white_error{color:#435ddb;display:flex;justify-content:center;justify-content:center;font-size:24px;margin-top:22px}
+.cart{margin-top: 1%;}
 
 
-@media screen and (max-width:1366px){
+/* @media screen and (max-width:1366px){
     .title_block{padding:15px}
     .Blogs_title{margin-left:16rem;font-size:25px}
     .Home_title{margin-left:340px}
@@ -75,7 +76,7 @@ a:hover{text-decoration:underline}
     .white_singup{font-size:30px;padding:40px}
     .white_input{margin-top:8px} 
     .white_error{font-size:24px;margin-top:22px}
-}
+} */
 /* @media screen and (max-width:360px){
     .title_block{padding:1rem}
     .Blogs_title{margin-left:285px;font-size:30px}

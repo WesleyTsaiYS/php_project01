@@ -10,7 +10,6 @@ function emptyInputSignup($name,$email,$username,$pwd,$pwdRepeat){
     }
     return $result;
 }
-
 function invalidUid($username){
     $result;
     #preg_match() 是PHP的RegEx
@@ -68,7 +67,6 @@ function uidExists($conn,$username,$email){
 
   mysqli_stmt_close($stmt);
 }
-
 function createUser($conn,$name,$email,$username,$pwd){
     #mysql 指令
     $sql = "INSERT INTO users(usersName, usersEmail, usersUid, usersPwd) VALUES(?,?,?,?);";
@@ -86,20 +84,18 @@ function createUser($conn,$name,$email,$username,$pwd){
     mysqli_stmt_close($stmt);
     header("location: ../signup.php?error=none");
           exit();
-  }
-
+}
 function emptyInputLogin($username,$pwd){
-$result;
-#查看變數是否為空，empty()是PHP內建函示
-if (empty($username)||empty($pwd)){
-    $result = true;
+    $result;
+    #查看變數是否為空，empty()是PHP內建函示
+    if (empty($username)||empty($pwd)){
+        $result = true;
+    }
+    else{
+        $result = false;
+    }
+    return $result;
 }
-else{
-    $result = false;
-}
-return $result;
-}
-
 function loginUser($conn, $username, $pwd){
     $uidExists = uidExists($conn,$username,$username);
 
@@ -117,10 +113,11 @@ function loginUser($conn, $username, $pwd){
     }
     else if($checkPwd === true){
         session_start();
-        $_SESSION["userid"] = $uidExists["usersID"];
+        $_SESSION["userid"] = $uidExists["usersId"];
         $_SESSION["useruid"] = $uidExists["usersUid"];
         $_SESSION["useremail"] = $uidExists["usersEmail"];
         header("location: ../index.php");
           exit();
     }
 }
+
