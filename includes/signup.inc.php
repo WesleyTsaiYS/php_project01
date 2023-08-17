@@ -26,15 +26,13 @@ if (isset($_POST["submit"])){
     if(invalidEmail($email) !== false){
         header("location: ../signup.php?error=invalidemail");
         exit();}
-    #如有輸入錯誤的email
+    #如有輸入錯誤的密碼
     if(pwdMatch($pwd,$pwdRepeat) !== false){
         header("location: ../signup.php?error=passworddontmatch");
         exit();}
     if(uidExists($conn,$username,$email) !== false){
         header("location: ../signup.php?error=usernametaken");
         exit();}
-
-
     createUser($conn,$name,$email,$username,$pwd);
     }
 #如果用戶輸入錯誤

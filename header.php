@@ -24,7 +24,7 @@
                         echo "<span class='title'><a href='cart.php'>CART</a></span>";
                         echo "<span class='title'><a href='index.php'>FIND BLOGS</a></span>";
                         echo "<span class='title'><a href='profile.php'>PROFILE PAGE</a></span>";
-                        echo "<span class='title'><a href='includs/logout.inc.php'>LOG OUT</a></span>";
+                        echo "<span class='title'><a href='includes/logout.inc.php'>LOG OUT</a></span>";
                     }
                     else{
                         echo "<span class='title'><a href='index.php';>HOME</a></span>";

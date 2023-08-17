@@ -6,8 +6,8 @@ error_reporting(E_ALL);
 
 // load lobraries
 include_once'header.php';
-require_once __DIR__ .'/includs/dbcart.inc.php';
-require_once __DIR__ .'/includs/cart_functions.inc.php';
+require_once __DIR__ .'/includes/dbh.inc.php';
+require_once __DIR__ .'/includes/cart_functions.inc.php';
 
 // logic code
 // session_start();

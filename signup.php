@@ -2,7 +2,7 @@
 
 <section>
     <div class="white_singup">Sign UP</div>
-    <form action="includs/signup.inc.php" method="post">
+    <form action="includes/signup.inc.php" method="post">
         <div class="white_input"><input type="text" name="name" placeholder="Full name ..."></div>
         <div class="white_input"><input type="text" name="email" placeholder="Email..."></div>
         <div class="white_input"><input type="text" name="uid" placeholder="Username..."></div>
