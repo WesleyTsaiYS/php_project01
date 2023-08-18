@@ -1,8 +1,8 @@
 <?php
-function emptyInputSignup($name,$email,$username,$pwd,$pwdRepeat){
+function emptyInputSignup($email,$username,$pwd,$pwdRepeat){
     $result;
     #查看變數是否為空，empty()是PHP內建函示
-    if (empty($name)||empty($email)||empty($username)||empty($pwd)||empty($pwdRepeat)){
+    if (empty($email)||empty($username)||empty($pwd)||empty($pwdRepeat)){
         $result = true;
     }
     else{
@@ -67,9 +67,9 @@ function uidExists($conn,$username,$email){
 
   mysqli_stmt_close($stmt);
 }
-function createUser($conn,$name,$email,$username,$pwd){
+function createUser($conn,$email,$username,$pwd){
     #mysql 指令
-    $sql = "INSERT INTO users(usersName, usersEmail, usersUid, usersPwd) VALUES(?,?,?,?);";
+    $sql = "INSERT INTO users(usersEmail, usersUid, usersPwd) VALUES(?,?,?);";
     #初始化mysql 指令，不讓惡意代碼進入資料庫
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt,$sql)){
@@ -78,8 +78,8 @@ function createUser($conn,$name,$email,$username,$pwd){
     }
     $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
 
-    #傳送參數給mysql,ssss四個參數
-    mysqli_stmt_bind_param($stmt,"ssss",$name,$email,$username,$hashedPwd);
+    #傳送參數給mysql,sss三個參數
+    mysqli_stmt_bind_param($stmt,"sss",$email,$username,$hashedPwd);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     header("location: ../signup.php?error=none");

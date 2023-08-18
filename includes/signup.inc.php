@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 #如果用戶正確輸入
 if (isset($_POST["submit"])){
     #$_POST=用戶輸入list
-    $name = $_POST["name"];
+    // $name = $_POST["name"];
     $email = $_POST["email"];
     $username = $_POST["uid"];
     $pwd = $_POST["pwd"];
@@ -15,7 +15,7 @@ if (isset($_POST["submit"])){
     #將數入資料回傳檢查錯函示檢查有無錯誤
     require_once 'functions.inc.php';
     #如果輸入有空格
-    if(emptyInputSignup($name,$email,$username,$pwd,$pwdRepeat) !== false){
+    if(emptyInputSignup($email,$username,$pwd,$pwdRepeat) !== false){
     header("location: ../signup.php?error=emptyinput");
     exit();}
     #如有輸入錯誤的Uid
@@ -33,7 +33,7 @@ if (isset($_POST["submit"])){
     if(uidExists($conn,$username,$email) !== false){
         header("location: ../signup.php?error=usernametaken");
         exit();}
-    createUser($conn,$name,$email,$username,$pwd);
+    createUser($conn,$email,$username,$pwd);
     }
 #如果用戶輸入錯誤
 else {
