@@ -4,7 +4,7 @@
     <div class="form-value">
         <form action="includes/signup.inc.php" method="post">
 
-            <h2>singup</h2>
+            <h2>Sign up</h2>
 
             <div class="inputbox">
                 <ion-icon name="mail-outline"></ion-icon>
@@ -29,7 +29,7 @@
                 <label for="">Repeat password</label>
             </div>
 
-            <button type="submit" name="submit">log in</button>
+            <button type="submit" name="submit">sign up</button>
            
         </form>
 

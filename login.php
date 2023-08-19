@@ -3,7 +3,7 @@
 <div class="form-box">
     <div class="form-value">
         <form action="includes/login.inc.php" method="post">
-            <h2>Login</h2>
+            <h2>Log in</h2>
             <div class="inputbox">
                 <ion-icon name="mail-outline"></ion-icon>
                 <input type="text" name="uid" required>

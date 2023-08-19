@@ -43,12 +43,13 @@ if(filter_input(INPUT_GET,'action') == 'delete'){
           <form method="post" action="cart.php?action=add&ID=<?= $product['ID'];?>">
               <div class="card-box">
                 <img src="img/<?= $product['Image'];?>"class="card-img"/>
-                <?= $product['Name']; ?>
-                $ <?= $product['Price'];?>
-                <input type="number" name="Quantity" placeholder="Enter the quantity" min="0" step="1" required/>
+                <div class='card-text'><?= $product['Name']; ?>
+                $ <?= $product['Price'];?></div>
+                <input type="number" name="Quantity" class = "card-input" placeholder="Quantity" min="0" step="1"  required/>
                 <input type="hidden" name="Name" value="<?= $product['Name']; ?>" />
                 <input type="hidden" name="Price" value="<?= $product['Price']; ?>"/>
-                <input type="submit" name="add_to_cart" class="card-sub" value="Add to cart"/>
+                <!-- <input type="submit" name="add_to_cart" class="card-sub" value="Add to cart"/> -->
+                <button type="submit" name="add_to_cart" class="card-button" value="Add to cart">Add to cart</button>
               </div>
             </form>
         <?php endwhile;?>
